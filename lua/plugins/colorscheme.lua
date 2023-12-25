@@ -1,17 +1,20 @@
 return {
 	-- themes
-	-- { "shaunsingh/nord.nvim" },
 	{ "catppuccin/nvim" },
-	-- { "AlexvZyl/nordic.nvim" },
+	{ "AlexvZyl/nordic.nvim" },
 	{ "rose-pine/neovim" },
+	{ "rebelot/kanagawa.nvim" },
+	{ "Mofiqul/vscode.nvim" },
 
 	-- Configure LazyVim to load the theme
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "rose-pine",
 			-- colorscheme = "catppuccin",
-			-- colorscheme = "nord",
+			colorscheme = "nordic",
+			-- colorscheme = "rose-pine",
+			-- colorscheme = "kanagawa",
+			-- colorscheme = "vscode",
 		},
 	},
 }

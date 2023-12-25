@@ -5,7 +5,7 @@ vim.keymap.set("n", "Y", "y$", { desc = "Yanks to end of line" })
 
 -- nvim-tree
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { silent = true })
-vim.keymap.set("n", "z", "<cmd>NvimTreeCollapse<cr>", { silent = true })
+-- vim.keymap.set("n", "z", "<cmd>NvimTreeCollapse<cr>", { silent = true })
 
 -- remove unnessesary key bindings
 vim.keymap.del("n", "y")
@@ -29,9 +29,9 @@ vim.keymap.del("n", "<leader>ft")
 
 -- easier delete (close) current buffer
 -- implementation taken from: https://github.com/LazyVim/LazyVim/blob/879e29504d43e9f178d967ecc34d482f902e5a91/lua/lazyvim/plugins/editor.lua#L433-L435
-vim.keymap.set("n", "<leader>c", function()
-	require("mini.bufremove").delete(0, true)
-end, { desc = "Delete Buffer (Force)" })
+-- vim.keymap.set("n", "<leader>c", function()
+-- 	require("mini.bufremove").delete(0, true)
+-- end, { desc = "Delete Buffer (Force)" })
 
 -- delete (close) all buffers
 -- NOTE: this will also close the buffer with NvimTree, that's why I added
@@ -79,5 +79,8 @@ vim.keymap.set("i", "<C-l>", function()
 	end
 end, { silent = true, desc = "LuaSnip: cycle through choices" })
 -------------------------------------------------------------------
---- LuaSnip End
 -------------------------------------------------------------------
+--- LuaSnip End
+
+-- deleting useless keymap (scroll forward) to add remap it in LSP
+vim.keymap.del("n", "<c-f>")
